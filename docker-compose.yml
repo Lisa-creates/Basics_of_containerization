@@ -1,0 +1,26 @@
+services:
+  app:
+    build: app/
+    container_name: app
+    networks:
+      - net
+    volumes:
+      - db:/app/data
+    depends_on:
+      - sqlite
+
+  sqlite:
+    build: sqlite/
+    container_name: sqlite
+    command: tail -f /dev/null # doesn't allow the container to stop
+    networks: 
+      - net
+    volumes:
+      - db:/db
+
+networks:
+  net:
+
+volumes:
+  db:
+
