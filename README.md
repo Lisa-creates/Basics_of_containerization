@@ -1,6 +1,5 @@
 # Basics_of_containerization 
 
-# Task 1. Basics of containerization
 ## Installation
 ### Docker
 See[documentation](https://docs.docker.com/engine/install/).
